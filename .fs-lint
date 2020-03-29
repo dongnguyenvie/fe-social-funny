@@ -1,0 +1,18 @@
+{
+    "rules": [
+        {
+        "files": [
+            "src/**/**/*.!(ts|tsx|md|stories.tsx)"
+        ],
+        "naming": "lowercase-dash",
+        "level": "error"
+        },
+        {
+        "files": [
+            "src/config/*.json"
+        ],
+        "naming": "lowerCamelCase",
+        "level": "error"
+        }
+    ]
+}
