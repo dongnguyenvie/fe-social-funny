@@ -3,21 +3,19 @@ import { HashRouter, Switch } from "react-router-dom";
 import router from "../config/router.json";
 import RouterExtension from "./RouterExtension";
 
-const Loading = () => <>Loading...</>;
-
-const HomePageContainer = lazy(() => import("../modules/homepage"));
+const RootContainer = lazy(() => import("../modules/root"));
 
 function App() {
   return (
     <>
       <HashRouter>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback>
           <Switch>
             <RouterExtension
               name="HomePageContainer"
               path={router.home}
               exact
-              component={HomePageContainer}
+              component={RootContainer}
             />
           </Switch>
         </Suspense>
