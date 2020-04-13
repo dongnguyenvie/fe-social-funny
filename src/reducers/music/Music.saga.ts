@@ -1,7 +1,7 @@
 import { put, takeEvery, fork, delay } from "redux-saga/effects";
 // import { IGetTestState } from "../../actions/IActions";
-import * as ActionTypeKeys from "../../actions/ActionTypeKeys";
 import services from "services";
+import * as ActionTypeKeys from "../../actions/ActionTypeKeys";
 
 export function* watchFetch() {
   yield takeEvery(ActionTypeKeys.FETCH_ARTIST_TOP_TRACKS, fetchArtistTopTracks);

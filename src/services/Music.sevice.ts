@@ -1,8 +1,9 @@
 import { API_URL } from "./config";
 
-const URL = `${API_URL}/music`;
 export default class MusicService {
+  private URL = `${API_URL}/music`;
+
   public get getArtistTopTracks() {
-    return URL + "/get-artist-top-tracks";
+    return `${this.URL}/get-artist-top-tracks`;
   }
 }

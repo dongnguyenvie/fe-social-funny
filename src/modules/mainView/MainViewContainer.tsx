@@ -9,7 +9,9 @@ export default function MainViewContainer() {
   };
   return (
     <>
-      <button onClick={onFetchTopTracks}>click</button>
+      <button type="button" onClick={onFetchTopTracks}>
+        click
+      </button>
       <pre>{JSON.stringify(musicText, null, 2)}</pre>
     </>
   );
