@@ -1,15 +1,17 @@
 import { put, takeEvery, fork, delay } from "redux-saga/effects";
-// import { IGetTestState } from "../../actions/IActions";
 import services from "services";
-import * as ActionTypeKeys from "../../actions/ActionTypeKeys";
+import { IFechMusicNewRelease, ActionTypeKeys, ActionTypes } from "./Type";
 
 export function* watchFetch() {
-  yield takeEvery(ActionTypeKeys.FETCH_ARTIST_TOP_TRACKS, fetchArtistTopTracks);
+  yield takeEvery(
+    ActionTypeKeys.FETCH_MUSIC_NEW_RELEASES,
+    fetchNewReleasesTracks
+  );
 }
 
-export function* fetchArtistTopTracks() {
+export function* fetchNewReleasesTracks() {
   try {
-    const rs = yield fetch(services.music.getArtistTopTracks);
+    const rs = yield fetch(services.music.getNewReleases);
     const rawData = yield rs.json();
 
     yield put(successFetch(rawData));
@@ -20,6 +22,6 @@ export function* fetchArtistTopTracks() {
 }
 
 const successFetch = (payload: any): any => ({
-  type: ActionTypeKeys.SET_ARTIST_TOP_TRACKS,
+  type: ActionTypeKeys.SET_MUSIC_NEW_RELEASES,
   payload,
 });

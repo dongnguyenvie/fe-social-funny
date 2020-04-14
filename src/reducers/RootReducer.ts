@@ -1,8 +1,11 @@
 import { combineReducers } from "redux";
 import { getUserReducer } from "./authentication/Auth.reducer";
-import { musicReducer } from "./music/Music.reducer";
+import { musicNewReleaseReducer } from "./music/Music.reducer";
 
-export default combineReducers({
+const rootReducers = combineReducers({
   user: getUserReducer,
-  music: musicReducer,
+  musicNewRelease: musicNewReleaseReducer,
 });
+
+export default rootReducers;
+export type IRootState = ReturnType<typeof rootReducers>;
