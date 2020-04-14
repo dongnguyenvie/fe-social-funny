@@ -6,4 +6,8 @@ export default class MusicService {
   public get getArtistTopTracks() {
     return `${this.URL}/get-artist-top-tracks`;
   }
+
+  public get getNewReleases() {
+    return `${this.URL}/get-new-releases`;
+  }
 }

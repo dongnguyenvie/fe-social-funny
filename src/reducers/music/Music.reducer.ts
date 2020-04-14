@@ -1,29 +1,23 @@
 import { Reducer } from "redux";
-import * as ActionTypeKeys from "actions/ActionTypeKeys";
+import { IFechMusicNewRelease, ActionTypeKeys, ActionTypes } from "./Type";
 
 const initState = {};
 
-export const musicReducer: Reducer<any, any> = (
+export const musicNewReleaseReducer: Reducer<any, ActionTypes> = (
   state = initState,
   action
-): any => {
+) => {
   switch (action.type) {
-    case ActionTypeKeys.SET_ARTIST_TOP_TRACKS:
+    case ActionTypeKeys.SET_MUSIC_NEW_RELEASES:
       console.log(action.payload);
       return action.payload;
-    // case ActionTypeKeys.SET_COUNT:
-    //   return {
-    //     ...state,
-    //     ...action.payload,
-    //   };
     default:
       return state;
   }
 };
 
-// export const onSetCount = (payload: any): any => {
-//   return {
-//     type: ActionTypeKeys.SET_COUNT,
-//     payload,
-//   };
-// };
+export const onFetchMusicRelease = (): IFechMusicNewRelease => {
+  return {
+    type: ActionTypeKeys.FETCH_MUSIC_NEW_RELEASES,
+  };
+};
