@@ -1,3 +1,11 @@
 {
-    "home": "/"
+    "home": "/",
+    "playlists": "/playlists",
+    "artist": "/artists",
+    "album": "/albums",
+    "songs": "/songs",
+    "store": "/store",
+    "radio": "/radio",
+    "forYou": "/for-you",
+    "browse": "/browse"
 }

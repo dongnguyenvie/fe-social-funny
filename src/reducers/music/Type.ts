@@ -3,7 +3,7 @@ export enum ActionTypeKeys {
   SET_MUSIC_NEW_RELEASES = "SET_MUSIC_NEW_RELEASES",
 }
 // new-releases
-export interface IMusic {}
+// export interface IMusic {}
 
 export interface IFechMusicNewRelease {
   type: ActionTypeKeys.FETCH_MUSIC_NEW_RELEASES;

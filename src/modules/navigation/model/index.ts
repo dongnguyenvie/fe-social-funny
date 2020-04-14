@@ -1,12 +1,10 @@
-export interface IRenderIcons {
+export interface INav {
   icon: string;
   content: string;
+  url?: string;
 }
 
-export interface INav {
-  icons: string;
-  content: string;
-}
+export interface IRenderIcons extends INav {}
 
 export interface IWrapperNavs {
   content: string;
@@ -19,4 +17,8 @@ export interface InavMapper {
 
 export interface INavigationUI {
   navigations: IWrapperNavs[];
+}
+
+export interface INavStyles {
+  linkActive?: boolean;
 }

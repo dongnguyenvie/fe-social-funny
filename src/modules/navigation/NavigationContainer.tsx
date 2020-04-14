@@ -1,5 +1,6 @@
 import React from "react";
 import { IWrapperNavs } from "modules/navigation/model";
+import router from "config/router.json";
 import NavigationUI from "./ui";
 
 const navigations: IWrapperNavs[] = [
@@ -7,20 +8,29 @@ const navigations: IWrapperNavs[] = [
     content: "LIBRARY",
     navs: [
       {
-        icons: "library_music",
+        icon: "home",
+        content: "Homes",
+        url: router.home,
+      },
+      {
+        icon: "library_music",
         content: "Playlists",
+        url: router.playlists,
       },
       {
-        icons: "person",
+        icon: "person",
         content: "Artists",
+        url: router.artist,
       },
       {
-        icons: "album",
+        icon: "album",
         content: "Albums",
+        url: router.album,
       },
       {
-        icons: "music_note",
+        icon: "music_note",
         content: "Songs",
+        url: router.songs,
       },
     ],
   },
@@ -28,20 +38,24 @@ const navigations: IWrapperNavs[] = [
     content: "DISCOVERY",
     navs: [
       {
-        icons: "local_grocery_store",
+        icon: "local_grocery_store",
         content: "Store",
+        url: router.store,
       },
       {
-        icons: "settings_ethernet",
+        icon: "settings_ethernet",
         content: "Radio",
+        url: router.radio,
       },
       {
-        icons: "favorite",
+        icon: "favorite",
         content: "For You",
+        url: router.forYou,
       },
       {
-        icons: "web",
+        icon: "web",
         content: "Browse",
+        url: router.browse,
       },
     ],
   },

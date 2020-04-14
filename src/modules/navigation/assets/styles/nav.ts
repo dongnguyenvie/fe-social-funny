@@ -1,4 +1,5 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { INavStyles } from "modules/navigation/model";
 
 const navStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -11,6 +12,11 @@ const navStyles = makeStyles((theme: Theme) =>
     nav: {
       paddingTop: theme.spacing(2.5),
     },
+    link: {
+      textDecoration: "none",
+      color: ({ linkActive }: INavStyles) =>
+        linkActive ? "#fa486b" : "#9298a1",
+    },
     rootRenderIcon: {
       cursor: "pointer",
       "&:hover, &:hover $textContent": {
@@ -21,7 +27,8 @@ const navStyles = makeStyles((theme: Theme) =>
       fontWeight: "bold",
     },
     textContent: {
-      color: "#646466",
+      color: ({ linkActive }: INavStyles) =>
+        linkActive ? "#fa486b" : "#646466",
       marginLeft: theme.spacing(2.5),
       fontSize: 14,
       fontWeight: 400,

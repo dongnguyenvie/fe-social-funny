@@ -1,24 +1,26 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { onFetchMusicRelease } from "reducers/music/Music.reducer";
-import { IRootState } from "reducers/RootReducer";
+import React, { Suspense } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import routes from "router/routes";
+import shortid from "shortid";
 
 export default function MainViewContainer() {
-  const musicText = useSelector((state: IRootState) => state.musicNewRelease);
-  const dispatch = useDispatch();
-  const onFetchNewReleasesTracks = () => {
-    dispatch(onFetchMusicRelease());
-  };
-
   return (
     <>
-      <button type="button" onClick={onFetchNewReleasesTracks}>
-        click
-      </button>
-      {musicText?.albums?.items[0]?.images?.map((item: any, index: number) => {
-        return <img src={item.url} key={index} />;
-      })}
-      <pre>{JSON.stringify(musicText, null, 2)}</pre>
+      <Suspense fallback>
+        <Switch>
+          {routes.map((route, idx) => {
+            const Component = route.component;
+            return Component ? (
+              <Route
+                key={shortid.generate()}
+                path={route.path}
+                exact={route.exact}
+                render={(props: any) => <Component {...props} />}
+              />
+            ) : null;
+          })}
+        </Switch>
+      </Suspense>
     </>
   );
 }
