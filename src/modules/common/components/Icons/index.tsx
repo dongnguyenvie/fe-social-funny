@@ -5,7 +5,7 @@ interface IIcons extends IconProps {
   icon: string;
 }
 
-export default function Icons(props: IIcons) {
+export default function Icons(props: IIcons): JSX.Element {
   const { icon } = props;
   return <Icon {...props}>{icon}</Icon>;
 }

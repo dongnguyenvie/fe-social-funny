@@ -11,6 +11,7 @@ const initState = {
   isLogin: false,
   isRemember: false,
 };
+
 export const getUserReducer: Reducer<IUSER, ActionTypes> = (
   state = initState,
   action

@@ -1,7 +1,8 @@
 export enum ActionTypeKeys {
-  GET_USER = "GET_USER",
-  SET_USER = "SET_USER",
+  GET_USER = "AUTHENTICATION/GET_USER",
+  SET_USER = "AUTHENTICATION/SET_USER",
 }
+
 export interface IUSER {
   username?: string;
   fullName?: string;

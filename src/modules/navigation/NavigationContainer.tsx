@@ -1,5 +1,5 @@
 import React from "react";
-import { IWrapperNavs } from "modules/navigation/model";
+import { IWrapperNavs } from "modules/navigation/type";
 import router from "config/router.json";
 import NavigationUI from "./ui";
 
@@ -61,6 +61,6 @@ const navigations: IWrapperNavs[] = [
   },
 ];
 
-export default function NavigationContainer() {
+export default function NavigationContainer(): JSX.Element {
   return <NavigationUI navigations={navigations} />;
 }

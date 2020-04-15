@@ -5,7 +5,7 @@ import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import FastAverageColor from "fast-average-color";
-import { IItemsCarousel } from "modules/artists/model";
+import { IItemsCarousel } from "modules/common/components/CustomizeCarousel/type";
 import useStyles from "./assets/styles";
 
 /** can not get interface result color of fast-average-color */
@@ -43,7 +43,7 @@ const getAverageColor = (
     .catch((e) => console.log(e));
 };
 
-export default function Cards({ item }: ICards) {
+export default function Cards({ item }: ICards): JSX.Element {
   const [averageColor, setAverageColor] = useState<string>("transparent");
   const { url, kindOfMusic, nameArtist } = item;
   const classes = useStyles({ averageColor });

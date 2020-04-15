@@ -7,12 +7,12 @@ import {
   InavMapper,
   INav,
   INavStyles,
-} from "modules/navigation/model";
+} from "modules/navigation/type";
 import { Icons } from "modules/common";
 import navStyles from "modules/navigation/assets/styles/nav";
 import { Link, useLocation } from "react-router-dom";
 
-function RenderIcons(props: IRenderIcons) {
+function RenderIcons(props: IRenderIcons): JSX.Element {
   const { pathname } = useLocation();
   const { icon, content, url } = props;
   const classes = navStyles({ linkActive: pathname === url });
@@ -27,7 +27,7 @@ function RenderIcons(props: IRenderIcons) {
   );
 }
 
-export default function Nav(props: InavMapper) {
+export default function Nav(props: InavMapper): JSX.Element {
   const {
     navMapper: { content, navs },
   } = props;

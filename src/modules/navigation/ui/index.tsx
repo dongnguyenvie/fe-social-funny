@@ -1,10 +1,10 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import { INavigationUI, IWrapperNavs } from "modules/navigation/model";
+import { INavigationUI, IWrapperNavs } from "modules/navigation/type";
 import UIStyles from "../assets/styles/ui";
 import Nav from "../components/Nav/Nav";
 
-export default function NavigationUI(props: INavigationUI) {
+export default function NavigationUI(props: INavigationUI): JSX.Element {
   const classes = UIStyles();
   const { navigations } = props;
 
