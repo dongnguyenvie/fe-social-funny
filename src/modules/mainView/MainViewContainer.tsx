@@ -3,7 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import routes from "router/routes";
 import shortid from "shortid";
 
-export default function MainViewContainer() {
+export default function MainViewContainer(): JSX.Element {
   return (
     <>
       <Suspense fallback>

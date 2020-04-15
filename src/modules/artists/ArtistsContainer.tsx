@@ -1,9 +1,15 @@
 import React from "react";
 import ArtistsContainerUI from "modules/artists/ui";
-import { ICarousel } from "modules/artists/model";
+import { ICarousel } from "modules/common/components/CustomizeCarousel/type/index";
 
 const carousel: ICarousel = {
   title: "Popular",
+  options: {
+    autoPlay: false,
+    interval: 4000,
+    indicators: true,
+    animation: "fade",
+  },
   listCarousel: [
     {
       items: [
@@ -52,6 +58,6 @@ const carousel: ICarousel = {
   ],
 };
 
-export default function ArtistsContainer() {
+export default function ArtistsContainer(): JSX.Element {
   return <ArtistsContainerUI carousel={carousel} />;
 }

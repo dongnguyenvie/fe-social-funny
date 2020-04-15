@@ -5,7 +5,9 @@ import uiStyles from "modules/albums/assets/styles/ui";
 
 interface IAlbumsContainerUI {}
 
-export default function AlbumsContainerUI(props: IAlbumsContainerUI) {
+export default function AlbumsContainerUI(
+  props: IAlbumsContainerUI
+): JSX.Element {
   const classes = uiStyles();
 
   return (

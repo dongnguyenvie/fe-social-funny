@@ -1,5 +1,5 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
-import { INavStyles } from "modules/navigation/model";
+import { INavStyles } from "modules/navigation/type";
 
 const navStyles = makeStyles((theme: Theme) =>
   createStyles({

@@ -1,6 +1,6 @@
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 
-const sectionStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapperCarousel: {
       overflow: "hidden",
@@ -24,5 +24,4 @@ const sectionStyles = makeStyles((theme: Theme) =>
     },
   })
 );
-
-export default sectionStyles;
+export default useStyles;

@@ -59,12 +59,15 @@
         "code": 200
       }
     ],
+    "react-hooks/exhaustive-deps": "warn",
     "linebreak-style": 0,
     "global-require": 0,
     "eslint linebreak-style": [0, "error", "windows"],
     "indent": ["off", 2],
     "react/jsx-indent": ["off", 2],
+    "no-underscore-dangle": ["off"],
     "react/jsx-one-expression-per-line": ["warn"],
+    "class-methods-use-this": ["off"],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
     "react/prop-types": ["warn"],

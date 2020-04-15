@@ -5,7 +5,7 @@ import Navigation from "modules/navigation";
 import MainView from "modules/mainView";
 import PlayingBar from "modules/playingBar";
 
-export default function RootUI() {
+export default function RootUI(): JSX.Element {
   const classes = UIStyles();
 
   return (
